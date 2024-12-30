@@ -82,7 +82,7 @@ namespace {
    static atomic_t implied_volatility_output_type = { 0 };
    inline double implied_volatility_output(int count, double volatility){ return implied_volatility_output_type.data>0 ? count : volatility; }
 #else
-   inline double implied_volatility_output(int count, double volatility){ return volatility; }
+   inline double implied_volatility_output(int /*count*/, double volatility){ return volatility; }
 #endif
 
 #ifdef ENABLE_CHANGING_THE_HOUSEHOLDER_METHOD_ORDER
